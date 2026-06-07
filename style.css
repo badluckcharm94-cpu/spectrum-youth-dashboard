@@ -277,39 +277,56 @@ font-weight:bold;
 .toolbar button:hover{
 opacity:.9;
 }
-
 @media(max-width:1000px){
 
-```
-.today-grid{
-    grid-template-columns:1fr;
-}
+    .today-grid{
+        grid-template-columns:1fr;
+    }
 
-.two-column{
-    grid-template-columns:1fr;
-}
+    .safety-grid{
+        grid-template-columns:1fr;
+    }
 
-.three-column{
-    grid-template-columns:1fr;
-}
+    .two-column{
+        grid-template-columns:1fr;
+    }
 
-.quick-links{
-    grid-template-columns:1fr;
-}
+    .three-column{
+        grid-template-columns:1fr;
+    }
 
-.hero h1{
-    font-size:2.5rem;
-}
+    .quick-links{
+        grid-template-columns:1fr;
+    }
 
-.hero h2{
-    font-size:1.3rem;
-}
+    .hero h1{
+        font-size:2.5rem;
+    }
 
-.controller,
-.heart{
-    position:static;
-    display:block;
-    margin-bottom:15px;
-    font-size:50px;
+    .hero h2{
+        font-size:1.3rem;
+    }
+
+    .controller,
+    .heart{
+        position:static;
+        display:block;
+        margin-bottom:15px;
+        font-size:50px;
+    }
+
+    body{
+        padding:10px;
+        font-size:16px;
+    }
+
+    .card,
+    .today-card{
+        padding:15px;
+    }
+
+    .quick-card{
+        min-height:auto;
+    }
+
 }
-```

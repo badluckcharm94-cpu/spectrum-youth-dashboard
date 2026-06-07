@@ -14,8 +14,10 @@ padding:30px;
 }
 
 .page{
-max-width:1400px;
-margin:auto;
+    max-width:1400px;
+    margin:auto;
+    background:linear-gradient(180deg,#12002e,#050010);
+    padding:20px;
 }
 
 .hero{
@@ -328,5 +330,49 @@ opacity:.9;
     .quick-card{
         min-height:auto;
     }
+}
 
+@media print {
+
+    body{
+        font-size:12px;
+        padding:10px;
+        background:#12002e !important;
+        -webkit-print-color-adjust:exact;
+        print-color-adjust:exact;
+    }
+
+    .toolbar{
+        display:none;
+    }
+
+    .today-grid,
+    .safety-grid,
+    .two-column,
+    .three-column,
+    .quick-links{
+        display:block !important;
+    }
+
+    .card,
+    .today-card{
+        margin-bottom:8px;
+        padding:10px;
+        box-shadow:none;
+        break-inside:avoid;
+    }
+
+    .quick-card{
+        display:block;
+        min-height:auto;
+        margin-bottom:8px;
+    }
+
+    h1{
+        font-size:24px;
+    }
+
+    h2{
+        font-size:16px;
+    }
 }

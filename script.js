@@ -63,4 +63,39 @@ async function saveCopy() {
 
         console.error(error);
     }
+}function exportPDF() {
+
+    const element = document.querySelector(".page");
+
+    if (!element) {
+        alert("Could not find .page element");
+        return;
+    }
+
+    if (typeof html2pdf === "undefined") {
+        alert("html2pdf library not loaded");
+        return;
+    }
+
+    const opt = {
+        margin: 0,
+        filename: "Spectrum-Youth-Club.pdf",
+        image: {
+            type: "jpeg",
+            quality: 1
+        },
+        html2canvas: {
+            scale: 2,
+            backgroundColor: "#12002e"
+        },
+        jsPDF: {
+            unit: "px",
+            format: [1200, element.scrollHeight]
+        }
+    };
+
+    html2pdf()
+        .set(opt)
+        .from(element)
+        .save();
 }
